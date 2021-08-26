@@ -1,0 +1,38 @@
+{
+  "services": [
+    {
+      "id": 42,
+      "backend_version": "1",
+      "backend_authentication_type": "service_token",
+      "backend_authentication_value": "token-value",
+      "proxy": {
+        "hosts": [
+          "foo"
+        ],
+        "api_backend": "http://httpbin.org",
+        "proxy_rules": [
+          {
+            "pattern": "/",
+            "http_method": "GET",
+            "metric_system_name": "hits",
+            "delta": 2
+          },
+          {
+            "pattern": "/",
+            "http_method": "POST",
+            "metric_system_name": "hits",
+            "delta": 2
+          }
+        ],
+        "policy_chain": [
+          {
+            "name": "apicast.policy.json_to_xml"
+          },
+          {
+            "name": "apicast.policy.apicast"
+          }
+        ]
+      }
+    }
+  ]
+}

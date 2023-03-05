@@ -1,5 +1,5 @@
 
-ARG IMAGE=registry.redhat.io/3scale-amp2/apicast-gateway-rhel8:3scale2.11
+ARG IMAGE=registry.redhat.io/3scale-amp2/apicast-gateway-rhel8:3scale2.13
 
 FROM ${IMAGE}
 

@@ -1,5 +1,7 @@
 luarocks {
 	group 'production' {
 		module { 'xml2lua' },
+		module { 'lua_pack' },
+		module { 'lua-resty-ldap' },
 	}
 }
